@@ -16,7 +16,6 @@ def get_travel_time(event, get_traffic_time):
             "key": GOOGLE_API_KEY,
             "mode": "driving",
             "departure_time": "now",
-            # "traffic_model": "best_guess"
         }
         print("in get traffic time")
 
@@ -24,7 +23,6 @@ def get_travel_time(event, get_traffic_time):
         parameters = {
             "origins": event.origin_address,
             "destinations": event.destination_address,
-            # "units" : "metric",
             "key": GOOGLE_API_KEY,
         }
     response = requests.get("https://maps.googleapis.com/maps/api/distancematrix/json?", params = parameters)
@@ -32,5 +30,5 @@ def get_travel_time(event, get_traffic_time):
     if get_traffic_time:
         time = response.json()['rows'][0]['elements'][0]['duration_in_traffic']['value']
     else:
-        time = response.json()['rows'][0]['elements'][0]['duration']['value'] # duration of travel, duration must be changed to duration in traffic
+        time = response.json()['rows'][0]['elements'][0]['duration']['value']
     return time # in seconds
