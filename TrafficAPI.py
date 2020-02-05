@@ -17,8 +17,6 @@ def get_travel_time(event, get_traffic_time):
             "mode": "driving",
             "departure_time": "now",
         }
-        print("in get traffic time")
-
     else:
         parameters = {
             "origins": event.origin_address,
