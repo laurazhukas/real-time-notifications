@@ -7,7 +7,7 @@
 # Running
 In order to run the program you will need to add a `GOOGLE_API_KEY` into the `TrafficAPI.py` file, as well as the serverConfig in `DataBase.py`. After these have both been added you must specify the user id of the user you would like to sign into on line 41 of `main.py`. Finally, you can run the program using `python3 main.py`.
 
-# Creating Mock Data
+# Creating mock data
 In `MockData.py` specify the user details as well as the events you would like to add to the user. Then run `python3 MockData.py`
 
 # Background on calculations
