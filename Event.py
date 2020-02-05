@@ -1,7 +1,7 @@
 class Event:
 
     def __init__(self, event_name : str, destination : str, origin : str, time : int, buffer_time : int):
-        self.name = event_name
+        self.name = event_name # user defined event name
         self.destination_address = destination # address user needs to get to
         self.origin_address = origin # the address the user starts at
         self.time = time # datetime object with the desired arrival time
